@@ -6,6 +6,6 @@ Dataset includes data from August 2011 to June 2015 about individual transaction
 
 The dataset also includes information about overall conditions in Russia's economy and finance sector.
 
-Try app **here**!
+Try app [**here**](https://moscow-housing.streamlit.app/)!
 
 Author: Artem Koval
