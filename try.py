@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import plotly.express as px
+
+
 # import plotly.graph_objects as go
 
 
@@ -62,7 +64,7 @@ col3.dataframe(
     },
 )
 
-fig = px.scatter(df, x='timestamp', y='price_doc', size='full_sq', symbol='num_room', color='sub_area', 
+fig = px.scatter(df, x='timestamp', y='price_doc', size='full_sq', symbol='num_room', color='sub_area',
                  hover_data=['life_sq', 'floor', 'max_floor', 'build_year', 'kitch_sq', 'metro_km_walk'])
 
 col3.subheader('Диаграмма продаж жилья в Москве')
@@ -74,8 +76,8 @@ y_axis = col3.selectbox('Выберите показатель для оси Y',
 
 # create chart with selectable axis
 fig_sel = px.scatter(df, x=x_axis, y=y_axis, size='full_sq', symbol='num_room', color='sub_area',
-                 hover_data=['full_sq', 'life_sq', 'floor', 'max_floor', 'build_year', 'kitch_sq',
-                             'metro_km_walk'])
+                     hover_data=['full_sq', 'life_sq', 'floor', 'max_floor', 'build_year', 'kitch_sq',
+                                 'metro_km_walk'])
 
 col3.subheader('Диаграмма продаж жилья в Москве (с выбором категорий)')
 
@@ -88,5 +90,3 @@ fig_sel.update_layout(
 )
 
 col3.plotly_chart(fig_sel)
-
-
